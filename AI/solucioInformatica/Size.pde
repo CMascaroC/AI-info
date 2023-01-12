@@ -1,19 +1,9 @@
-// Marges Horitzontal i Vertical
-float marginH = 20,
-      marginV = 20;
-
 // Dimensions Zona Lateral
 float sidebarWidth  = 300, 
-      sidebarHeight = 720;
+      sidebarHeight = 960;
 
 // Dimensions Logo
-float logoWidth  = 300, 
-      logoHeight = 300;
+float logoWidth  = 220, 
+      logoHeight = 220,
+      marginL = 40;
       
-// Dimensions Banner
-float bannerWidth  = 1560, 
-      bannerHeight = 300;
-      
-// Dimensions Columnes
-float columnWidth  = 505,
-      columnHeight = 720;

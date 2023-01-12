@@ -11,7 +11,6 @@ PImage[] imgs;
 void setMedias(){
     this.imgs = new PImage[1]; // Afegir imatges de prendes i altres
     this.imgs[0] = loadImage(URL_IMGS+"logo.jpeg");
-
 }
   
 // Getter del número d'imatges
@@ -33,6 +32,9 @@ PImage getImgAt(int i){
 // Dibuixa el logo
 void displayLogo(float x, float y, float w, float h){    
     image(getLogo(), x, y, w, h);
+    stroke(0); strokeWeight(1.5); noFill();
+    rect(x, y, w, h);
+    noStroke();
 }
   
 // Dibuixa la imatge i-èssima

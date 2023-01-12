@@ -1,13 +1,13 @@
 void setup() {
-  setColors();
-  setMedias();
+  asignarColores();
+  asignarMultimedia();
   size(1920, 960);
-  noStroke();                         // Sense bordes
+  noStroke();                         // Sin bordes
   textAlign(CENTER); textSize(18); 
 }
 
 void draw() {
-  displayScreen1();  
+  dibujarPantalla1();  
   mousePressed();
   println("X: "+mouseX+", Y:"+mouseY);
 }

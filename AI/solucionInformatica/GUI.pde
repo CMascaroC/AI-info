@@ -12,7 +12,7 @@ void setGUI(){
 
 void crearPrendas(){
    p1 = new Prenda("Chaqueta", "capucha", obtenerImgEn(0));
-   p1.setStockColores(cantidades,colors);
+   p1.setDisponibilidadColores(cantidades,colors);
 }
 
 void crearBotones(){

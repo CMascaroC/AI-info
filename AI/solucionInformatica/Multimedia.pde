@@ -1,16 +1,26 @@
 // Informació de la Multimedia de la App
 
 // URL de la carpeta donde estan las imagenes
-String URL_IMGS = "Images/";
-String URL_FONTS = "Fonts/";
+String URL_IMGS = "Imagenes/";
+String URL_TIPOGRAFIAS = "Tipografias/";
 
 // Array de imagenes (JPG, PNG, GIF)
 PImage[] imgs;
+//PShape[] iconos;
+PFont[] tipografias;
 
 // Establece las imagenes de la App
 void asignarMultimedia() {
-  this.imgs = new PImage[1]; // Añadir imagenes de prendas y otros
-  this.imgs[0] = loadImage(URL_IMGS+"logo.jpeg");
+  // Añadir imagenes de prendas y otros
+  this.imgs = new PImage[2]; 
+  this.imgs[0] = loadImage(URL_IMGS+"logo.jpeg"); 
+  this.imgs[1] = loadImage(URL_IMGS+"lupa.png");
+  
+  // Añadir tipografias
+  this.tipografias = new PFont[3];
+  this.tipografias[0] = createFont(URL_TIPOGRAFIAS+"arial.ttf", 12);
+  this.tipografias[1] = createFont(URL_TIPOGRAFIAS+"Optima nova LT Light Regular.otf", 12);
+  this.tipografias[2] = createFont(URL_TIPOGRAFIAS+"VeraMono.ttf", 12);
 }
 
 // Getter del número de imagenes

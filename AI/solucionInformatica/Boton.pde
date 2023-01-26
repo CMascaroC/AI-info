@@ -8,18 +8,20 @@ class Boton {
  color rellenarColorSobre, rellenarColorDeshabilitado;
  
  String textoBoton;  // Texto
+ int numLetras; //Tamaño de la letra
  boolean habilitado;  // Habilitado / deshabilitado
  
  // Método Constructor
- Boton(String texto, float x, float y, float w, float h){
+ Boton(String texto, float x, float y, float w, float h, int numLetras){
    this.textoBoton = texto;
    this.x = x;
    this.y = y;
    this.w = w;
    this.h = h;
+   this.numLetras = numLetras;
    this.habilitado = true;
-   rellenarColor = color(155, 55, 155);
-   rellenarColorSobre = color(255, 55, 155);
+   rellenarColor = color(obtenerColorEn(2));
+   rellenarColorSobre = color(obtenerColorEn(1));
    rellenarColorDeshabilitado = color(150);
    bordeColor = color(0);
  }
@@ -35,24 +37,28 @@ class Boton {
    pushStyle();
    if(!habilitado){
      fill(rellenarColorDeshabilitado);  // Color desabilitat
+     cursor(ARROW);
    }
    else if(ratonSobreBoton()){
-     fill(rellenarColorSobre);      // Color quan ratolí a sobre
+     fill(rellenarColorSobre); // Color quan ratolí a sobre
+     cursor(HAND);
    }
    else{
      fill(rellenarColor);          // Color actiu però ratolí fora
+     cursor(ARROW);
    }
+   
    stroke(bordeColor); strokeWeight(2);        //Color i gruixa del contorn
    rect(this.x, this.y, this.w, this.h, 10);    // Rectangle del botó
    
    // Text (color, alineació i mida)
-   fill(0); textAlign(CENTER); textSize(20);
-   text(textoBoton, this.x + this.w/2, this.y + this.h/2 + 10);
+   fill(0); textAlign(CENTER); textFont(tipografias[2]); textSize(numLetras);
+   text(textoBoton, this.x + this.w/2, this.y + this.h-17.5);
    popStyle();
  }
  
  // Indica si el cursor está sobre el botón
- boolean ratonSobreBoton(){
+ boolean ratonSobreBoton() {
    return (mouseX >= this.x) && 
           (mouseX<=this.x + this.w) && 
           (mouseY>= this.y) && 

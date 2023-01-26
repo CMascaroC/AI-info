@@ -2,12 +2,13 @@ color[] colores;
 
 // Estableix colores de l'App
 void asignarColores() {
-  this.colores = new color[5];
-  this.colores[0] = color(#A51C40);
-  this.colores[1] = color(#116D70);
-  this.colores[2] = color(#42C2BE);
-  this.colores[3] = color(#CDCFD1);
-  this.colores[4] = color(#000000);
+  this.colores = new color[6];
+  this.colores[0] = color(#A51C40); //Rojo oscuro
+  this.colores[1] = color(#116D70); //Verde oscuro
+  this.colores[2] = color(#42C2BE); //Verde claro
+  this.colores[3] = color(#CDCFD1); //Gris claro
+  this.colores[4] = color(#000000); //Negro
+  this.colores[5] = color(#FF6774); //Rojo claro
 }
 
 // Getter del número de colores

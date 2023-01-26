@@ -1,11 +1,23 @@
 // Dimensiones Zona Lateral
-float barraLateralAnchura  = 300, 
-      barraLateralAltura = 960;
+float barraLateralAnchura  = 350, 
+      barraLateralAltura = 960,
+      margen1 = 50,
+      margen2 = 75;
 
 // Dimensiones Logo
-float logoAnchura  = 220, 
-      logoAltura = 220,
-      margenL = 40;
+float margenL = 65,
+      logoAnchura  = barraLateralAnchura-2*margenL, 
+      logoAltura = logoAnchura;
       
-Boton b1;
+//Dimensiones prendas
+float prendaAltura = 150,
+      prendaAnchura = 1370,
+      prendaMargenX = 100,
+      prendaMargenY = 100,
       
+      prendaMargenImg = 20,
+      prendaImgX = barraLateralAnchura+prendaMargenX+prendaMargenImg,
+      prendaImgMedida = prendaAltura-2*prendaMargenImg,
+      
+      prendaNombreX = prendaImgX+20,
+      prendaTextoY = prendaMargenY+prendaAltura-20;
